@@ -1,14 +1,7 @@
+//gold mine problem: https://www.geeksforgeeks.org/gold-mine-problem/?ref=lbp
 #include <bits/stdc++.h>
 #define MX 1000
-using std::cin;
-using std::cout;
-using std::cerr;
-using std::endl;
-using std::stack;
-using std::max;
-using std::pair;
-using std::make_pair;
-
+using namespace std;
 int n,m;
 int D[MX+2][MX+2];
 int a[MX][MX];
@@ -42,7 +35,7 @@ void solve()
             i = i + 1;
         cns_j--;
     }
-    cout << "Path (0-indexed): ";
+    cout << "Path (0-indexed): { ";
     while(!st.empty())
     {
         cout << "(" << st.top().first << ", " << st.top().second << ")";
@@ -50,6 +43,7 @@ void solve()
         if(!st.empty())
             cout << " -> ";
     }
+    cout << " }" << endl;
 }
 int main()
 {
